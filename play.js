@@ -4,12 +4,13 @@
  * Establishes connection with the game server
  */
 const { connect } = require('./client');
-const { setupInput } = require('./input')
+const { setupInput, handleUserInput } = require('./input')
 console.log('Connecting ...');
 connect();
 
 console.log('Connecting ...');
 connect();
 
-input();
+setupInput();
+// handleUserInput();
 
