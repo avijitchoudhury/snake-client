@@ -15,7 +15,11 @@ const handleUserInput = function (data) {
   } if (data === '\u0073') {
       // console.log("Down")
       conn.write ('Move: down')
-    }
+    } if (data === '`') {
+      conn.write ('Say: Eat more!') 
+    } if (data === ' ') {
+      conn.write ('Say: Get bigger!!!!')
+  } 
 }
 const setupInput = function (conn) {
   const stdin = process.stdin;

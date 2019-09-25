@@ -6,11 +6,11 @@ const connect = function () {
   conn.on('data', (data) => {
     console.log('Server says: ', data);
     conn.on('connect', () => {
-      // conn.on('connect', () => {
-      //   conn.write('Move: up');
         console.log('Successfully connected to game server')
         conn.write('Name: Avi');
-      // });
+    });
+    conn.on('connect', () => {
+      conn.write('Name: Avi');
     });
   });
   conn.setEncoding('utf8');
@@ -23,5 +23,5 @@ module.exports = { connect };
 
 
 
-//Paied with @JOadelic
+//Paied with @JOadelicd
 
