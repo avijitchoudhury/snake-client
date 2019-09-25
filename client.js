@@ -1,7 +1,7 @@
 const net = require('net');
 
 const connect = function () {
-  const conn = net.createConnection({host: '172.46.2.204', port: 50541});
+  const conn = net.createConnection({host: '10.0.2.15', port: 50541});
   // interpret incoming data as text
   conn.on('data', (data) => {
     console.log('Server says: ', data);
@@ -22,4 +22,6 @@ const connect = function () {
 module.exports = { connect };
 
 
+
+//Paied with @JOadelic
 
